@@ -1,0 +1,276 @@
+/* Premium India SVG Map Styles */
+
+.map-container {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 3rem;
+    margin-top: 2.5rem;
+    margin-bottom: 4rem;
+    align-items: start;
+}
+
+.map-subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+
+/* Premium Map Container */
+.india-svg-map {
+    width: 100%;
+    height: 700px;
+    background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
+    border-radius: var(--radius-md);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+        -15px 25px 50px rgba(0, 0, 0, 0.45),
+        0 10px 30px rgba(0, 0, 0, 0.3),
+        inset 0 2px 5px rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transform: perspective(1500px) rotateX(12deg) rotateY(-8deg) rotateZ(-1deg);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.india-svg-map:hover {
+    transform: perspective(1500px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    box-shadow: 
+        0 20px 45px rgba(0, 0, 0, 0.35),
+        0 10px 20px rgba(0, 0, 0, 0.2),
+        inset 0 2px 5px rgba(255, 255, 255, 0.05);
+}
+
+.india-svg-map::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+.india-svg-map svg {
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 600px;
+    filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.4));
+    z-index: 1;
+    position: relative;
+}
+
+/* Elegant Slate & Gold State Path Styling */
+.state-path {
+    fill: #1e293b;
+    stroke: #334155;
+    stroke-width: 1.5;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+}
+
+/* State Fills by Region for visual grouping */
+#jammu-kashmir, #himachal-pradesh, #punjab, #haryana, #delhi, #uttarakhand {
+    fill: #1e293b;
+}
+
+#uttar-pradesh, #madhya-pradesh, #chhattisgarh, #bihar, #jharkhand {
+    fill: #1e293b;
+}
+
+#rajasthan, #gujarat, #maharashtra, #goa {
+    fill: #1e293b;
+}
+
+#karnataka, #telangana, #andhra-pradesh, #tamil-nadu, #kerala {
+    fill: #1e293b;
+}
+
+#west-bengal, #odisha, #assam {
+    fill: #1e293b;
+}
+
+.state-path:hover {
+    fill: rgba(212, 175, 55, 0.25);
+    stroke: var(--accent);
+    stroke-width: 2.5;
+    filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.35));
+    z-index: 5;
+}
+
+.state-path.active {
+    fill: var(--accent);
+    stroke: var(--white);
+    stroke-width: 3;
+    filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.6));
+    z-index: 10;
+}
+
+/* Interactive Map Instruction Tag */
+.map-instructions {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: var(--glass-blur);
+    padding: 10px 18px;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--white);
+    box-shadow: var(--shadow-md);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 5;
+}
+
+.map-instructions span {
+    color: var(--accent);
+}
+
+/* Glassmorphic Info Panel */
+.temple-info-panel {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    height: fit-content;
+    position: sticky;
+    top: 120px;
+    transition: var(--transition);
+    max-height: 700px;
+    overflow-y: auto;
+}
+
+.temple-info-panel.active {
+    border-color: rgba(212, 175, 55, 0.3);
+    box-shadow: var(--shadow-lg);
+}
+
+.temple-info-panel h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#temple-details p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* Temple Item in Side Panel */
+.temple-item {
+    background: var(--bg-light);
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    border-radius: var(--radius-sm);
+    border-left: 4px solid var(--accent);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.temple-item:hover {
+    transform: translateX(4px);
+    background-color: var(--white);
+    box-shadow: var(--shadow-md);
+}
+
+.temple-item h4 {
+    color: var(--primary);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.temple-item p {
+    color: var(--text-muted);
+    margin-bottom: 0.3rem;
+    font-size: 0.88rem;
+}
+
+.temple-item p strong {
+    color: var(--primary-light);
+    font-weight: 600;
+}
+
+/* Scrollbar Customization */
+.temple-info-panel::-webkit-scrollbar {
+    width: 6px;
+}
+
+.temple-info-panel::-webkit-scrollbar-track {
+    background: var(--bg-light);
+    border-radius: var(--radius-sm);
+}
+
+.temple-info-panel::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: var(--radius-sm);
+}
+
+.temple-info-panel::-webkit-scrollbar-thumb:hover {
+    background: var(--accent);
+}
+
+/* Responsive Map Queries */
+@media (max-width: 1100px) {
+    .map-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .india-svg-map {
+        height: 600px;
+    }
+    
+    .temple-info-panel {
+        position: static;
+        max-height: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .india-svg-map {
+        height: 480px;
+        padding: 15px;
+    }
+    
+    .map-instructions {
+        top: 15px;
+        left: 15px;
+        font-size: 0.75rem;
+        padding: 8px 12px;
+    }
+    
+    .temple-info-panel {
+        padding: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .india-svg-map {
+        height: 380px;
+    }
+    
+    .india-svg-map svg {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dham Yatra - India's Sacred Temple Explorer</title>
+    <meta name="description" content="Explore the rich spiritual heritage, sacred geometry, and timeless architecture of India's finest temples. Start your spiritual journey with Dham Yatra.">
+    <link rel="stylesheet" href="Dham_Yatra.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+    <!-- Shared Components Script -->
+    <script src="shared.js" defer></script>
+</head>
+<body>
+    <!-- Navbar Component Hook -->
+    <div id="navbar-hook"></div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Dham Yatra</h1>
+            <p>Explore the Sacred Temples of India</p>
+            <a href="#states" class="cta-button">Start Your Journey</a>
+        </div>
+        <!-- Scroll Down Indicator -->
+        <div class="scroll-indicator" onclick="document.getElementById('states').scrollIntoView({behavior: 'smooth'})" aria-label="Scroll down to states">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 5v14M19 12l-7 7-7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Featured Temples Section -->
+    <section class="featured-temples">
+        <div class="container">
+            <h2 class="section-title">Featured Sacred Temples</h2>
+            <div class="temples-grid">
+                <!-- Temple 1 -->
+                <div class="temple-card">
+                    <div class="temple-card-image-wrapper">
+                        <span class="temple-card-badge">Andhra Pradesh</span>
+                        <img src="images/vishnu_temple.png" alt="Tirumala Venkateswara Temple">
+                    </div>
+                    <div class="temple-info">
+                        <h3>Tirumala</h3>
+                        <div class="temple-meta">
+                            <span>📍 Tirupati</span>
+                            <span>🕉️ Lord Venkateswara</span>
+                        </div>
+                        <p>Tirumala is a spiritual place in Tirupati district of Andhra Pradesh, famous for its ancient architecture, high energy, and rich cultural traditions.</p>
+                        <a href="Andhra_Pradesh.html" class="temple-link-btn">Explore AP Temples</a>
+                    </div>
+                </div>
+
+                <!-- Temple 2 -->
+                <div class="temple-card">
+                    <div class="temple-card-image-wrapper">
+                        <span class="temple-card-badge">Tamil Nadu</span>
+                        <img src="images/devi_temple.png" alt="Meenakshi Amman Temple">
+                    </div>
+                    <div class="temple-info">
+                        <h3>Meenakshi Temple</h3>
+                        <div class="temple-meta">
+                            <span>📍 Madurai</span>
+                            <span>🕉️ Goddess Meenakshi</span>
+                        </div>
+                        <p>Famous historical temple dedicated to Goddess Meenakshi in Madurai, renowned worldwide for its majestic gopurams and detailed stone carvings.</p>
+                        <a href="Tamil_Nadu.html" class="temple-link-btn">Explore TN Temples</a>
+                    </div>
+                </div>
+
+                <!-- Temple 3 -->
+                <div class="temple-card">
+                    <div class="temple-card-image-wrapper">
+                        <span class="temple-card-badge">Gujarat</span>
+                        <img src="images/shiva_temple.png" alt="Somnath Temple">
+                    </div>
+                    <div class="temple-info">
+                        <h3>Somnath Temple</h3>
+                        <div class="temple-meta">
+                            <span>📍 Veraval</span>
+                            <span>🕉️ Lord Shiva</span>
+                        </div>
+                        <p>Located in Veraval, Somnath is the first among the twelve sacred Jyotirlinga shrines of Lord Shiva, standing proudly on the coast of the Arabian Sea.</p>
+                        <a href="map.html" class="temple-link-btn">View Map Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- States Section -->
+    <section id="states" class="states-section">
+        <div class="container">
+            <h2 class="section-title">Explore Temples by State</h2>
+            <div class="states-grid">
+                <!-- State 1 -->
+                <div class="state-card">
+                    <div class="state-image-wrapper">
+                        <img src="images/tamil_nadu.png" alt="Brihadeeswarar Temple Tamil Nadu">
+                    </div>
+                    <div class="state-info">
+                        <h3>Tamil Nadu</h3>
+                        <p>Studded with complex architecture, variety of sculptures, and rich inscriptions, the temples remain the very essence of the culture and heritage of Tamil land.</p>
+                        <a href="Tamil_Nadu.html" class="explore-btn">Explore More</a>
+                    </div>
+                </div>
+
+                <!-- State 2 -->
+                <div class="state-card">
+                    <div class="state-image-wrapper">
+                        <img src="images/uttar_pradesh.png" alt="Uttar Pradesh Temples">
+                    </div>
+                    <div class="state-info">
+                        <h3>Uttar Pradesh</h3>
+                        <p>Uttar Pradesh has some of the best pilgrimage sites to offer. Attracting millions of people every year, the state is a preferred choice for pilgrimage tourism in India.</p>
+                        <a href="Uttar_Pradesh.html" class="explore-btn">Explore More</a>
+                    </div>
+                </div>
+
+                <!-- State 3 -->
+                <div class="state-card">
+                    <div class="state-image-wrapper">
+                        <img src="images/andhra_pradesh.png" alt="Andhra Pradesh Temples">
+                    </div>
+                    <div class="state-info">
+                        <h3>Andhra Pradesh</h3>
+                        <p>One can find temples in every nook and corner of Andhra Pradesh. These sacred temples have great religious significance and brilliant centuries-old architecture.</p>
+                        <a href="Andhra_Pradesh.html" class="explore-btn">Explore More</a>
+                    </div>
+                </div>
+
+                <!-- State 4 -->
+                <div class="state-card">
+                    <div class="state-image-wrapper">
+                        <img src="images/karnataka.png" alt="Karnataka Temples">
+                    </div>
+                    <div class="state-info">
+                        <h3>Karnataka</h3>
+                        <p>Karnataka is the ultimate destination for temple tours. It is simply amazing how one state can be home to many temples belonging to different ancient dynasties.</p>
+                        <a href="Karnataka.html" class="explore-btn">Explore More</a>
+                    </div>
+                </div>
+
+                <!-- State 5 -->
+                <div class="state-card">
+                    <div class="state-image-wrapper">
+                        <img src="images/maharashtra.png" alt="Maharashtra Temples">
+                    </div>
+                    <div class="state-info">
+                        <h3>Maharashtra</h3>
+                        <p>The historical temples in Maharashtra are well-known for their fascinating histories and connections to the Hindu holy texts and our nation's past.</p>
+                        <a href="Maharashtra.html" class="explore-btn">Explore More</a>
+                    </div>
+                </div>
+
+                <!-- State 6 -->
+                <div class="state-card">
+                    <div class="state-image-wrapper">
+                        <img src="images/kerala.png" alt="Kerala Temples">
+                    </div>
+                    <div class="state-info">
+                        <h3>Kerala</h3>
+                        <p>Kerala is indeed 'The Land of Gods.' This southernmost state is a land full of legends and tales, with some of the oldest temples that act as evidences of authenticity.</p>
+                        <a href="Kerala.html" class="explore-btn">Explore More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="home-about-section">
+        <div class="container">
+            <div class="about-content">
+                <img src="images/logo.png" alt="Dham Yatra Logo" class="about-logo">
+                <h2>About Dham Yatra</h2>
+                <p class="about-text">
+                    The temple explorer has a lot to choose from the various devotional and spiritual wealth in India. Every location is specific to the preferences and beliefs one has when deciding to visit the places. Most visits are based on preferences related to devotional places or temples of importance - be it the Jyotirlings, Shakti Peeths, family gods or goddesses, or specific lineage parameters.
+                </p>
+                <a href="about.html" class="cta-button">Read Full Story</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA Section -->
+    <section class="global-contact-cta">
+        <div class="container">
+            <h2>Plan Your Spiritual Journey</h2>
+            <p>Have questions or need custom travel advice? Reach out to our team to help customize your devotional temple itinerary.</p>
+            <a href="Contact.html" class="cta-button">Get In Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer Component Hook -->
+    <div id="footer-hook"></div>
+</body>
+</html>
