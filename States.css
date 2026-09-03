@@ -647,6 +647,17 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.1rem;
 }
 
+.global-contact-cta .container a{
+    text-decoration: none;
+    color: #1e293b;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    border: 2px solid white;
+    background-color: #f8fafc;
+    border-radius: 4rem;
+    padding: 7px 25px 7px;
+}
+
 /* Footer Section */
 .footer {
     background-color: var(--primary);
